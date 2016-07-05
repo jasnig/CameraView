@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k71-s1-lSF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-hE-7wE" customClass="CameraView" customModule="CameraView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-lY-INx">
+                                <rect key="frame" x="0.0" y="550" width="45" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="8Kc-CK-qZf"/>
+                                </constraints>
+                                <state key="normal" title="闪光灯"/>
+                                <connections>
+                                    <action selector="flashType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugc-rl-23q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngv-Ym-ILN">
+                                <rect key="frame" x="65" y="550" width="45" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="53E-RH-Mup"/>
+                                </constraints>
+                                <state key="normal" title="摄像头"/>
+                                <connections>
+                                    <action selector="cameraPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y1a-cR-u4P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-F0-S39">
+                                <rect key="frame" x="130" y="550" width="45" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="0Fr-vx-mHw"/>
+                                </constraints>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zm-Yv-SAg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nfm-F0-S39" firstAttribute="leading" secondItem="Ngv-Ym-ILN" secondAttribute="trailing" constant="20" id="2A3-jU-lQ6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PSZ-lY-INx" secondAttribute="bottom" id="3x7-jw-Xcd"/>
+                            <constraint firstItem="Ngv-Ym-ILN" firstAttribute="leading" secondItem="PSZ-lY-INx" secondAttribute="trailing" constant="20" id="7Ou-nA-eQp"/>
+                            <constraint firstItem="Ngv-Ym-ILN" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" id="DW8-kV-n7V"/>
+                            <constraint firstItem="PSZ-lY-INx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mov-eE-7Wl"/>
+                            <constraint firstItem="PSZ-lY-INx" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" id="Rqu-ft-BZG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nfm-F0-S39" secondAttribute="bottom" id="TGr-7T-0dR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" constant="50" id="e4H-6q-WeP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ngv-Ym-ILN" secondAttribute="bottom" id="jD6-sa-Jbe"/>
+                            <constraint firstItem="IuZ-hE-7wE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lgQ-3F-5EE"/>
+                            <constraint firstItem="Nfm-F0-S39" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" id="obR-9x-PVU"/>
+                            <constraint firstAttribute="trailing" secondItem="IuZ-hE-7wE" secondAttribute="trailing" id="pyR-L5-bk9"/>
+                            <constraint firstItem="IuZ-hE-7wE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rIj-Wx-YMY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="r1s-5F-FAv"/>
+                    <connections>
+                        <outlet property="cameraView" destination="IuZ-hE-7wE" id="NZU-Ou-Sqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1138" y="344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uxf-1d-Ztx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k71-s1-lSF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4eX-Jv-hrC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LQS-y8-6VL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GiY-cS-zYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="337"/>
         </scene>
     </scenes>
 </document>

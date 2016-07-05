@@ -14,6 +14,7 @@
 		4A906F1F1D2AA6E9000BDC23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A906F1D1D2AA6E9000BDC23 /* LaunchScreen.storyboard */; };
 		4A906F2A1D2AA6E9000BDC23 /* CameraViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A906F291D2AA6E9000BDC23 /* CameraViewTests.swift */; };
 		4A906F351D2AA6E9000BDC23 /* CameraViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A906F341D2AA6E9000BDC23 /* CameraViewUITests.swift */; };
+		4A906F451D2C1D54000BDC23 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A906F441D2C1D54000BDC23 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4A906F301D2AA6E9000BDC23 /* CameraViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A906F341D2AA6E9000BDC23 /* CameraViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewUITests.swift; sourceTree = "<group>"; };
 		4A906F361D2AA6E9000BDC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A906F441D2C1D54000BDC23 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				4A906F141D2AA6E9000BDC23 /* AppDelegate.swift */,
 				4A906F161D2AA6E9000BDC23 /* ViewController.swift */,
+				4A906F441D2C1D54000BDC23 /* CameraView.swift */,
 				4A906F181D2AA6E9000BDC23 /* Main.storyboard */,
 				4A906F1B1D2AA6E9000BDC23 /* Assets.xcassets */,
 				4A906F1D1D2AA6E9000BDC23 /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					4A906F101D2AA6E9000BDC23 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9G8PCT5S2D;
 					};
 					4A906F241D2AA6E9000BDC23 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -258,6 +262,7 @@
 			files = (
 				4A906F171D2AA6E9000BDC23 /* ViewController.swift in Sources */,
 				4A906F151D2AA6E9000BDC23 /* AppDelegate.swift in Sources */,
+				4A906F451D2C1D54000BDC23 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CameraView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UESTC.ZeroJ.CameraView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CameraView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UESTC.ZeroJ.CameraView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

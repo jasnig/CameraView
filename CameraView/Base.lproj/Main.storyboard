@@ -18,60 +18,124 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-hE-7wE" customClass="CameraView" customModule="CameraView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="G0a-pe-Oqt"/>
+                                    <constraint firstAttribute="width" constant="200" id="pmH-v4-GSq"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-lY-INx">
-                                <rect key="frame" x="0.0" y="550" width="45" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dj9-oI-Pa6">
+                                <rect key="frame" x="0.0" y="418" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-lY-INx">
+                                        <rect key="frame" x="153" y="0.0" width="105" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="TT4-Hu-Pks"/>
+                                        </constraints>
+                                        <state key="normal" title="切换闪光灯模式"/>
+                                        <connections>
+                                            <action selector="changeFlashType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmj-4M-eKZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngv-Ym-ILN">
+                                        <rect key="frame" x="263" y="0.0" width="75" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="w10-jN-Uvd"/>
+                                        </constraints>
+                                        <state key="normal" title="切换摄像头"/>
+                                        <connections>
+                                            <action selector="changeCameraPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVD-6c-rX4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-F0-S39">
+                                        <rect key="frame" x="278" y="51" width="70" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="mFG-Kz-9l3"/>
+                                        </constraints>
+                                        <state key="normal" title="拍照/摄像"/>
+                                        <connections>
+                                            <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2O5-PL-OCr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYz-vx-7QP">
+                                        <rect key="frame" x="343" y="0.0" width="60" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="TJf-3p-LR3"/>
+                                        </constraints>
+                                        <state key="normal" title="切换画质"/>
+                                        <connections>
+                                            <action selector="changeMediaQuality:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuU-oO-SPn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qf-R3-EPy">
+                                        <rect key="frame" x="153" y="51" width="100" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Ydr-ct-vwq"/>
+                                        </constraints>
+                                        <state key="normal" title="切换拍照/摄像"/>
+                                        <connections>
+                                            <action selector="changeOutputType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-dA-b4S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="8Kc-CK-qZf"/>
+                                    <constraint firstAttribute="bottom" secondItem="5qf-R3-EPy" secondAttribute="bottom" id="5Bi-Pc-LFP"/>
+                                    <constraint firstItem="PSZ-lY-INx" firstAttribute="leading" secondItem="Dj9-oI-Pa6" secondAttribute="leading" id="A73-u7-UOC"/>
+                                    <constraint firstItem="5qf-R3-EPy" firstAttribute="leading" secondItem="PSZ-lY-INx" secondAttribute="leading" id="CsY-Co-pd2"/>
+                                    <constraint firstAttribute="bottom" secondItem="5qf-R3-EPy" secondAttribute="bottom" id="F0n-4D-nbS"/>
+                                    <constraint firstItem="5qf-R3-EPy" firstAttribute="top" secondItem="Dj9-oI-Pa6" secondAttribute="top" id="HGt-VW-Xth"/>
+                                    <constraint firstItem="lYz-vx-7QP" firstAttribute="top" secondItem="Dj9-oI-Pa6" secondAttribute="top" id="QXc-Jh-ps4"/>
+                                    <constraint firstItem="PSZ-lY-INx" firstAttribute="top" secondItem="Dj9-oI-Pa6" secondAttribute="top" id="S9I-dh-Ezs"/>
+                                    <constraint firstAttribute="bottom" secondItem="lYz-vx-7QP" secondAttribute="bottom" constant="50" id="Ubf-20-bKX"/>
+                                    <constraint firstItem="5qf-R3-EPy" firstAttribute="leading" secondItem="lYz-vx-7QP" secondAttribute="trailing" constant="5" id="Vc4-hD-Ctj"/>
+                                    <constraint firstItem="Nfm-F0-S39" firstAttribute="top" secondItem="5qf-R3-EPy" secondAttribute="top" id="XKi-Al-5s1"/>
+                                    <constraint firstItem="Nfm-F0-S39" firstAttribute="leading" secondItem="5qf-R3-EPy" secondAttribute="trailing" constant="25" id="Xps-Ws-7D4"/>
+                                    <constraint firstAttribute="height" constant="100" id="dy6-ql-mK0"/>
+                                    <constraint firstItem="Ngv-Ym-ILN" firstAttribute="centerX" secondItem="Dj9-oI-Pa6" secondAttribute="centerX" id="fVn-ku-zD2"/>
+                                    <constraint firstItem="5qf-R3-EPy" firstAttribute="top" secondItem="PSZ-lY-INx" secondAttribute="bottom" constant="1" id="g5S-XU-51q"/>
+                                    <constraint firstItem="5qf-R3-EPy" firstAttribute="top" secondItem="Dj9-oI-Pa6" secondAttribute="top" id="iXC-lk-Dya"/>
+                                    <constraint firstItem="Ngv-Ym-ILN" firstAttribute="top" secondItem="Dj9-oI-Pa6" secondAttribute="top" id="lds-DC-Y79"/>
+                                    <constraint firstItem="Ngv-Ym-ILN" firstAttribute="leading" secondItem="PSZ-lY-INx" secondAttribute="trailing" constant="5" id="rdL-Ag-xfU"/>
+                                    <constraint firstItem="lYz-vx-7QP" firstAttribute="leading" secondItem="Ngv-Ym-ILN" secondAttribute="trailing" constant="5" id="tie-2y-qVs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nfm-F0-S39" secondAttribute="bottom" id="u0k-9G-cPn"/>
+                                    <constraint firstItem="Nfm-F0-S39" firstAttribute="top" secondItem="Dj9-oI-Pa6" secondAttribute="top" id="uj6-S3-sEv"/>
+                                    <constraint firstAttribute="bottom" secondItem="PSZ-lY-INx" secondAttribute="bottom" constant="50" id="wbI-Ab-llG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ngv-Ym-ILN" secondAttribute="bottom" constant="50" id="xpp-Au-L94"/>
                                 </constraints>
-                                <state key="normal" title="闪光灯"/>
-                                <connections>
-                                    <action selector="flashType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugc-rl-23q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngv-Ym-ILN">
-                                <rect key="frame" x="65" y="550" width="45" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="53E-RH-Mup"/>
-                                </constraints>
-                                <state key="normal" title="摄像头"/>
-                                <connections>
-                                    <action selector="cameraPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y1a-cR-u4P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-F0-S39">
-                                <rect key="frame" x="130" y="550" width="45" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="0Fr-vx-mHw"/>
-                                </constraints>
-                                <state key="normal" title="拍照"/>
-                                <connections>
-                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zm-Yv-SAg"/>
-                                </connections>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A73-u7-UOC"/>
+                                        <exclude reference="5Bi-Pc-LFP"/>
+                                        <exclude reference="HGt-VW-Xth"/>
+                                        <exclude reference="Vc4-hD-Ctj"/>
+                                        <exclude reference="iXC-lk-Dya"/>
+                                        <exclude reference="uj6-S3-sEv"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nfm-F0-S39" firstAttribute="leading" secondItem="Ngv-Ym-ILN" secondAttribute="trailing" constant="20" id="2A3-jU-lQ6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PSZ-lY-INx" secondAttribute="bottom" id="3x7-jw-Xcd"/>
-                            <constraint firstItem="Ngv-Ym-ILN" firstAttribute="leading" secondItem="PSZ-lY-INx" secondAttribute="trailing" constant="20" id="7Ou-nA-eQp"/>
-                            <constraint firstItem="Ngv-Ym-ILN" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" id="DW8-kV-n7V"/>
-                            <constraint firstItem="PSZ-lY-INx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mov-eE-7Wl"/>
-                            <constraint firstItem="PSZ-lY-INx" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" id="Rqu-ft-BZG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nfm-F0-S39" secondAttribute="bottom" id="TGr-7T-0dR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" constant="50" id="e4H-6q-WeP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ngv-Ym-ILN" secondAttribute="bottom" id="jD6-sa-Jbe"/>
-                            <constraint firstItem="IuZ-hE-7wE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lgQ-3F-5EE"/>
-                            <constraint firstItem="Nfm-F0-S39" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" id="obR-9x-PVU"/>
-                            <constraint firstAttribute="trailing" secondItem="IuZ-hE-7wE" secondAttribute="trailing" id="pyR-L5-bk9"/>
-                            <constraint firstItem="IuZ-hE-7wE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rIj-Wx-YMY"/>
+                            <constraint firstItem="Dj9-oI-Pa6" firstAttribute="top" secondItem="IuZ-hE-7wE" secondAttribute="bottom" constant="18" id="9V8-67-Hyh"/>
+                            <constraint firstItem="Dj9-oI-Pa6" firstAttribute="trailing" secondItem="IuZ-hE-7wE" secondAttribute="trailing" id="Eu4-pn-baI"/>
+                            <constraint firstAttribute="trailing" secondItem="Dj9-oI-Pa6" secondAttribute="trailing" id="Fwi-Ep-ciF"/>
+                            <constraint firstItem="IuZ-hE-7wE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ma2-zj-3lf"/>
+                            <constraint firstItem="Dj9-oI-Pa6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WAh-qP-lWo"/>
+                            <constraint firstItem="Dj9-oI-Pa6" firstAttribute="leading" secondItem="IuZ-hE-7wE" secondAttribute="leading" id="bHU-TT-oJ4"/>
+                            <constraint firstItem="IuZ-hE-7wE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yzg-6b-2hW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Eu4-pn-baI"/>
+                                <exclude reference="bHU-TT-oJ4"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="r1s-5F-FAv"/>
                     <connections>
-                        <outlet property="cameraView" destination="IuZ-hE-7wE" id="NZU-Ou-Sqh"/>
+                        <outlet property="cameraView" destination="IuZ-hE-7wE" id="Xyj-UP-UJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

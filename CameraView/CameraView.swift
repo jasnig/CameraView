@@ -391,7 +391,7 @@ extension CameraView {
         self.cannotAccessTheCameraHandler = handler
     }
     
-    // // call this method to get and handle the captured still image after you have called prepareCamra()
+    /// call this method to get and handle the captured still image after you have called prepareCamra()
     public func getStillImage(handler:((image: UIImage?, error: NSError?) -> Void)) -> Bool {
         
         if !hasCamera() {

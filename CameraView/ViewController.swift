@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var cameraView: CameraView!
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraView.layer.cornerRadius = 100
@@ -38,9 +36,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    
-    
     
     @IBAction func changeCameraPosition(sender: UIButton) {
         let cameraPosition = cameraView.autoChangeCameraPosition()

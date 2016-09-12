@@ -32,8 +32,9 @@
 
 ###如果有建议, 请随意issue或者P-R
 
-####如果对您有帮助,请随手给个star 
 
+####如果对你有帮助,请随手给个star 
+####如果你在使用中遇到问题: 可以联系我QQ: 854136959
 ## License
 
 CameraView is released under the MIT license. See LICENSE for details.
